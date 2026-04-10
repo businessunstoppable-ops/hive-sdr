@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ lead.name }}</h2>
+<p>Website: {{ lead.website }}</p>
+<p>Phone: {{ lead.phone }}</p>
+<p>Rating: {{ lead.rating }}</p>
+<p>Score: {{ lead.score }}</p>
+<p>Status: {{ lead.status }}</p>
+<p>Created: {{ lead.created_at }}</p>
+<p>Updated: {{ lead.updated_at }}</p>
+<h3>Notes</h3>
+<ul>
+{% for note in lead.notes %}
+    <li>{{ note }}</li>
+{% endfor %}
+</ul>
+<form method="post" action="/lead/{{ lead.id }}/note">
+    <textarea name="note"></textarea>
+    <button type="submit">Add Note</button>
+</form>
+<form method="post" action="/lead/{{ lead.id }}/status">
+    <select name="status">
+        <option>new</option><option>contacted</option><option>qualified</option>
+        <option>negotiating</option><option>won</option><option>lost</option>
+    </select>
+    <button type="submit">Update Status</button>
+</form>
+<a href="/leads">Back to leads</a>
+{% endblock %}

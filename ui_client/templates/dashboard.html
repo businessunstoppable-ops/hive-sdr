@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Total Leads: {{ total_leads }}</p>
+<p>Avg Score: {{ avg_score }}</p>
+<p>Emails Sent: {{ emails_sent }}</p>
+<p>Follow-ups: {{ follow_ups }}</p>
+<h3>Recent Leads</h3>
+<ul>
+{% for lead in recent_leads %}
+    <li>{{ lead.name }} (Score: {{ lead.score }}) - <a href="/lead/{{ lead.id }}">View</a></li>
+{% else %}
+    <li>No leads yet.</li>
+{% endfor %}
+</ul>
+<h3>Recent Campaigns</h3>
+<ul>
+{% for c in campaigns %}
+    <li>{{ c.industry }} in {{ c.city }} - {{ c.status }}</li>
+{% else %}
+    <li>No campaigns.</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Austria Sport Amsterdam",
+    "place_id": "ChIJzSYO4xvjxUcRHjBdE3EwShY",
+    "address": "Kon. Wilhelminaplein 13, 1062 HH Amsterdam, Netherlands",
+    "phone": "020 772 4960",
+    "website": "http://www.austriasport.nl/",
+    "rating": 4.4,
+    "total_ratings": 59,
+    "business_status": "OPERATIONAL",
+    "lat": 52.3546325,
+    "lng": 4.8412185
+  },
+  {
+    "name": "JD Sports",
+    "place_id": "ChIJ5V8lNOEJxkcRKCT966uTY4M",
+    "address": "Kalverstraat 99, 1012 PA Amsterdam, Netherlands",
+    "phone": "020 808 5656",
+    "website": "http://www.jdsports.nl/",
+    "rating": 3.1,
+    "total_ratings": 321,
+    "business_status": "OPERATIONAL",
+    "lat": 52.3698863,
+    "lng": 4.8914428
+  },
+  {
+    "name": "JD Sports",
+    "place_id": "ChIJz7XxU-gJxkcRMgVTqv3DuL0",
+    "address": "86-88 Leidsestraat, 1117PE Amsterdam, Netherlands",
+    "phone": "020 808 5659",
+    "website": "https://www.jdsports.nl/?utm_campaign=325&utm_source=google+listings&utm_medium=organic&y_source=1_OTAwOTEwNy03MTUtbG9jYXRpb24ud2Vic2l0ZQ==",
+    "rating": 3.5,
+    "total_ratings": 202,
+    "business_status": "OPERATIONAL",
+    "lat": 52.36489359999999,
+    "lng": 4.8838558
+  },
+  {
+    "name": "Sports Medical Center Amsterdam",
+    "place_id": "ChIJ-4Aa3f8JxkcRXH35b7zyLbA",
+    "address": "Olympiaplein 74-A, 1076 AG Amsterdam, Netherlands",
+    "phone": "020 662 7244",
+    "website": "http://www.smcamsterdam.nl/",
+    "rating": 4.4,
+    "total_ratings": 133,
+    "business_status": "OPERATIONAL",
+    "lat": 52.348306,
+    "lng": 4.865728799999999
+  },
+  {
+    "name": "JD Sports",
+    "place_id": "ChIJ_4aJCMcJxkcRb_0U8L6KxK4",
+    "address": "Nieuwendijk 196, 1012 MV Amsterdam, Netherlands",
+    "phone": "085 902 1388",
+    "website": "https://www.jdsports.nl/?utm_campaign=545&utm_source=google+listings&utm_medium=organic&y_source=1_OTAwOTEyMy03MTUtbG9jYXRpb24ud2Vic2l0ZQ==",
+    "rating": 3.4,
+    "total_ratings": 1523,
+    "business_status": "OPERATIONAL",
+    "lat": 52.374577,
+    "lng": 4.893558
+  }
+]

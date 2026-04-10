@@ -1,0 +1,12 @@
+terminal:
+
+
+ls -la /Users/mollercule/Documents/sdr_backup_*.tar.gz
+-rw-r--r--@ 1 mollercule  staff  179105678 Apr 10 00:23 /Users/mollercule/Documents/sdr_backup_20260410_114616.tar.gz
+
+
+cd /Users/mollercule/Documents
+tar -xzf sdr_backup_20260410_114616.tar.gz -C /tmp
+cp /tmp/sdr/ui_client/app.py /Users/mollercule/Documents/sdr/ui_client/app.py
+
+python -m uvicorn ui_client.app:app --host 127.0.0.1 --port 54609 --reload

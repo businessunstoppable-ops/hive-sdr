@@ -1,0 +1,84 @@
+{
+  "gym": {
+    "pain_points": [
+      "member churn and retention",
+      "low attendance during off-peak hours",
+      "outdated equipment or facilities",
+      "inefficient class scheduling",
+      "lack of member engagement"
+    ],
+    "opportunities": [
+      "member retention software with automated check‑ins",
+      "dynamic class scheduling and waitlist management",
+      "loyalty and referral programs",
+      "personalised workout plans via app"
+    ],
+    "opening_line": "I noticed your gym has great reviews but many members drop off after 3 months. We've helped similar gyms reduce churn by 40%."
+  },
+  "restaurant": {
+    "pain_points": [
+      "inconsistent table turnover",
+      "no‑shows and last‑minute cancellations",
+      "negative reviews about service speed",
+      "underutilised loyalty program"
+    ],
+    "opportunities": [
+      "automated table management and waitlist",
+      "deposit‑based reservations to reduce no‑shows",
+      "real‑time review monitoring and response system"
+    ],
+    "opening_line": "I see your restaurant has solid ratings, but several recent reviews mention slow service during peak hours. We've helped restaurants cut wait times by 25%."
+  },
+  "plumber": {
+    "pain_points": [
+      "missed appointments and poor dispatch",
+      "customer complaints about pricing transparency",
+      "low online visibility in local searches"
+    ],
+    "opportunities": [
+      "automated scheduling and route optimisation",
+      "instant quote calculators on website",
+      "review generation system"
+    ],
+    "opening_line": "Many plumbing businesses lose leads because of slow response times. We can help you capture and convert more emergency calls."
+  },
+  "saas": {
+    "pain_points": [
+      "high customer churn",
+      "low trial‑to‑paid conversion",
+      "feature underutilisation"
+    ],
+    "opportunities": [
+      "personalised onboarding sequences",
+      "automated usage‑based emails",
+      "customer success playbooks"
+    ],
+    "opening_line": "Your SaaS has great potential, but many users never activate core features. We've helped B2B SaaS increase activation by 30%."
+  },
+  "coffee shop": {
+    "pain_points": [
+      "morning rush bottlenecks",
+      "low repeat customer rate",
+      "competition from chains"
+    ],
+    "opportunities": [
+      "mobile ordering and pickup",
+      "loyalty app integration",
+      "local influencer partnerships"
+    ],
+    "opening_line": "Independent coffee shops like yours often struggle with the morning rush. We've implemented queue‑busting systems that increase throughput by 20%."
+  },
+  "default": {
+    "pain_points": [
+      "customer retention",
+      "online visibility",
+      "operational efficiency"
+    ],
+    "opportunities": [
+      "automated marketing",
+      "customer feedback system",
+      "streamlined booking"
+    ],
+    "opening_line": "I noticed your business has room to grow. We've helped similar companies improve their customer experience."
+  }
+}

@@ -1,14 +1,10 @@
-# lead_finder/google_maps_search.py
-import googlemaps
-import os
-from typing import List, Dict, Optional
 from dataclasses import dataclass, asdict
-import time
+from typing import List, Optional
 import json
+import googlemaps
 
 @dataclass
 class Lead:
-    """Data structure for a discovered lead"""
     name: str
     place_id: str
     address: str
@@ -19,29 +15,21 @@ class Lead:
     business_status: str
     lat: float
     lng: float
-    
+
     def to_dict(self):
         return asdict(self)
 
 class GoogleMapsLeadFinder:
-    """Discovers businesses using Google Maps Places API"""
-    
     def __init__(self, api_key: str):
         self.client = googlemaps.Client(key=api_key)
         self.api_calls_count = 0
-        
+
     def search_by_keyword(self, keyword: str, location: str, max_results: int = 50) -> List[Lead]:
-        """Search for businesses by keyword in a location"""
         leads = []
         next_page_token = None
-        
         while len(leads) < max_results:
-            result = self.client.places(
-                query=f"{keyword} in {location}",
-                page_token=next_page_token
-            )
+            result = self.client.places(query=f"{keyword} in {location}", page_token=next_page_token)
             self.api_calls_count += 1
-            
             for place in result.get('results', []):
                 details = self._get_place_details(place['place_id'])
                 if details:
@@ -58,35 +46,26 @@ class GoogleMapsLeadFinder:
                         lng=place['geometry']['location']['lng']
                     )
                     leads.append(lead)
-                    
                 if len(leads) >= max_results:
                     break
-                    
             next_page_token = result.get('next_page_token')
             if next_page_token:
+                import time
                 time.sleep(2)
             else:
                 break
-                
         return leads
-    
-    def _get_place_details(self, place_id: str) -> Dict:
-        """Get detailed information for a specific place"""
+
+    def _get_place_details(self, place_id: str) -> dict:
         try:
-            result = self.client.place(place_id, fields=[
-                'formatted_phone_number',
-                'website',
-                'opening_hours',
-                'price_level'
-            ])
+            result = self.client.place(place_id, fields=['formatted_phone_number', 'website'])
             self.api_calls_count += 1
             return result.get('result', {})
         except Exception as e:
-            print(f"Error getting details for {place_id}: {e}")
+            print(f"Error getting details: {e}")
             return {}
-    
+
     def save_leads_to_file(self, leads: List[Lead], filename: str = "leads.json"):
-        """Save leads to JSON file for later processing"""
         with open(filename, 'w') as f:
             json.dump([lead.to_dict() for lead in leads], f, indent=2)
-        print(f"✅ Saved {len(leads)} leads to {filename}")
+        print(f"Saved {len(leads)} leads to {filename}")

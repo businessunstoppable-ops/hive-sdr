@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Campaign Result</h2>
+<p>Status: {{ campaign.status }}</p>
+<p>Leads Found: {{ campaign.leads_found }}</p>
+<p>Emails Generated: {{ campaign.emails_generated }}</p>
+{% if campaign.error %}<p>Error: {{ campaign.error }}</p>{% endif %}
+<a href="/campaign">New Campaign</a>
+{% endblock %}

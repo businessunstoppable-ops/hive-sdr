@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Start Campaign</h2>
+<form method="post" action="/campaign/run">
+    <label>Industry: <input name="industry" required></label><br>
+    <label>City: <input name="city" required></label><br>
+    <label>Max Leads: <input name="max_leads" value="5"></label><br>
+    <button type="submit">Run Campaign</button>
+</form>
+{% endblock %}

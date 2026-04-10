@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Database and backups
+leads_db.json
+*.tar.gz
+*.db
+
+# Static files (if any)
+static/uploads/
+
+# IDE
+.vscode/
+.idea/
+*.json

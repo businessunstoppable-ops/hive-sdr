@@ -1,0 +1,13 @@
+body.theme-om {
+    --bg-body: #154230;
+    --bg-nav: #5D1E21;
+    --bg-card: #5D1E21;
+    --text-primary: #A6824A;
+    --text-secondary: #E6E2DA;
+    --border: #A6824A;
+    --hover-bg: #A6824A;
+    --btn-bg: #A6824A;
+    --btn-color: #154230;
+    --btn-hover-bg: #E6E2DA;
+    --btn-hover-color: #101111;
+}

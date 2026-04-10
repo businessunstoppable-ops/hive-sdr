@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Analytics</h2>
+<p>Total Leads: {{ total_leads }}</p>
+<p>Avg Score: {{ avg_score }}</p>
+<p>Emails Sent: {{ emails_sent }}</p>
+<p>Follow-ups: {{ follow_ups }}</p>
+<p>Conversion Rate: {{ conversion_rate }}%</p>
+<h3>By Status</h3>
+<ul>
+{% for status, count in by_status.items() %}
+    <li>{{ status }}: {{ count }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
